@@ -3,6 +3,7 @@ body {
 }
 
 /* CABEÇALHO */
+
 .filtersContainer {
     display: flex;
     justify-content: space-evenly;
@@ -18,17 +19,17 @@ body {
     cursor: pointer;
     display: block;
     font-size: 0.9rem;
+    background-color: rgba(18, 184, 134, 0.05);
+    border: 1.5px solid rgba(18, 184, 134, 0.05);
+    color: #12B886;
+    
 }
-
-.estiloGeralBotoes--mostrarTodos {
-    color: black;
-    background-color: #d3d3d3;
-}
-
-.estiloGeralBotoes--filtrarHortifruti {
-    background-color: tomato;
+.estiloGeralBotoes:focus{
+    background-color:#12B886;
     color: white;
+    transition: all 0.6s;
 }
+
 
 .containerBuscaPorNome {
     display: flex;
@@ -49,120 +50,113 @@ body {
 
 /* CONTEÚDO */
 main{
-    display: flex;
-    padding: 30px;
-    margin: 0 auto;
-    max-width: 1280px;
-}
-
-.containerListaProdutos {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    animation-name: "Raquel";
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
-.containerListaProdutos ul {
+.containerCarrinho{
+    width: 100%;
+
+    background-color: #12B886;
+}
+.carrinhoCompras{
+    border:1px black solid;
+    width: 300px;
+    height: 60vh;
+    position: fixed;
+    margin-left: 55%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carrinhoCompras span{
+    margin: 10px 0 20px 0;
+    font-size: 20px;
+}
+main ul {
+    width: 50%;
     list-style: none;
     text-align: center;
     display: flex;
     justify-content: center;
+    
+}
+main ul button{
+    border-style: none;
+    background-color: #12B886;
+    color: antiquewhite;
+    font-size: 110%;
+    border-radius: 15px;
+}
+main ul button:hover{
+    cursor: pointer;
+    
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 
-.containerListaProdutos ul li:not(ol li) {
+main ul li {
     color: black;
     font-weight: bold;
     padding: 20px;
     margin: 10px;
     border-radius: 5px;
     transition: ease-in-out .1s;
-    width: 20%;
+    width: 30%;
 }
 
-.containerListaProdutos ul li:not(ol li):hover {
+main ul li:hover {
     box-shadow: 3px 3px 13px 1px rgb(146 146 146);
+    cursor: pointer;
 }
 
-.containerListaProdutos ul li img {
+main ul li img {
     width: 100%;
     max-width: 80px;
 }
+main ul li ol{
+    display: flex;
+    justify-content: center;
+}
+main ul li ol li{
+    width: 60%;
+}
 
-.containerListaProdutos ul li h3 {
+main ul li h3 {
     font-size: 1.5rem;
 }
 
-.containerListaProdutos ul li p {
+main ul li p {
     font-size: 1.5rem;
 }
-.containerListaProdutos ul li span {
+main ul li span {
     font-size: 0.8rem;
     font-weight: 500;
     margin-top: 10px;
     display: inline-block;
 }
 
-.containerListaProdutos ul li button {
-    background-color: #009f5a;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    height: 40px;
-}
-.containerListaProdutos ul li button:hover {
-    box-shadow: 1px 1px 2px rgb(189, 189, 189);
-}
-
-.containerListaProdutos ul li ol{
-    list-style: inside decimal;
-    text-align: left;
-}
-.containerListaProdutos ul li ol li{
-    font-size: 13px;
-    margin: 7px 0;
-}
-
 /* PREÇO TOTAL */
 .containerPrecoTotal{
     text-align: center;
-    margin: 40px 0 30px;
 }
 .containerPrecoTotal p{
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 .containerPrecoTotal p span{}
 
-
-
-.containerCarrinho {
-    width: 450px;
-    text-align: center;
-    border: 1px solid #ccc;
-}
-.containerCarrinho img {
-    max-width: 100px;
-}
-.containerCarrinho ul {
-    
-    display: flex;
-    flex-direction: column;
-}
-.containerCarrinho button {
-    display: none;
-}
-.containerCarrinho li {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-}
-
-.containerCarrinho li span{
-    font-size: 1.125rem;
-}
-
-.containerCarrinho li ol{
-    display: none;
+@keyframes Raquel{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
