@@ -1,6 +1,8 @@
 const produtos = [
     {
         id: 1,
+        pesquisa_nome: 'banana',
+        pesquisa_secao:'hortifruti',
         nome: 'Banana',
         preco: '2.00',
         secao: 'Hortifruti',
@@ -17,6 +19,8 @@ const produtos = [
     },
     {
         id: 2,
+        pesquisa_nome: 'morango',
+        pesquisa_secao:'hortifruti',
         nome: 'Morango',
         preco: '2.00',
         secao: 'Hortifruti',
@@ -33,7 +37,9 @@ const produtos = [
     },
     {
         id: 3,
-        nome: 'Maçã',
+        pesquisa_nome: 'maça',
+        pesquisa_secao:'hortifruti',
+        nome: 'Maça',
         preco: '2.00',
         secao: 'Hortifruti',
         categoria: 'fruta',
@@ -49,10 +55,12 @@ const produtos = [
     },
     {
         id: 4,
+        pesquisa_nome: 'pao',
+        pesquisa_secao:'panificadora',
         nome: 'Pão',
         preco: '4.00',
         secao: 'Panificadora',
-        categoria: 'Pães',
+        categoria: 'paes',
         img: './src/img/pao.png',
         promocao: true,
         precoPromocao: '2.50',
@@ -65,10 +73,12 @@ const produtos = [
     },
     {
         id: 5,
+        pesquisa_nome: 'leite',
+        pesquisa_secao:'laticinios',
         nome: 'Leite',
         preco: '5.00',
-        secao: 'Laticinio',
-        categoria: 'Leite',
+        secao: 'Laticínios',
+        categoria: 'leite',
         img: './src/img/leite.png',
         promocao: false,
         precoPromocao: '1.00',
@@ -78,5 +88,6 @@ const produtos = [
             'Gorduras totais'
         ] 
     },
+    
     
 ]
