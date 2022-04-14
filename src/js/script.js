@@ -88,22 +88,15 @@ function montarListaProdutos(listaProdutos) {
 function filtrar(pesquisa, tipo) {
   
         
-    if(tipo == 1){
+ 
     
             const listaHortifruti = produtos.filter((produto) => {
-                return produto.secao === pesquisa;       
+                return produto.pesquisa_secao === pesquisa || produto.pesquisa_nome===pesquisa||produto.categoria===pesquisa;       
             });
             
             montarListaProdutos(listaHortifruti);
         
-    }
-    else{
-        const listaHortifruti = produtos.filter((produto) => {
-            return produto.nome === pesquisa;
-        });
-       
-        montarListaProdutos(listaHortifruti);
-    }
+
    
 }
 
@@ -115,24 +108,25 @@ let btnPesquisa = document.querySelector(".estiloGeralBotoes--botaoBuscaPorNome"
 
 
 btnFiltroHortifruti.addEventListener("click",function(){
-    filtrar("Hortifruti",1)
+    filtrar("hortifruti",1)
     
 })
 btnFiltroPanificadora.addEventListener("click",function(){
     
-    filtrar("Panificadora",1)
+    filtrar("panificadora",1)
     
 })
-btnFiltroLaticinios.addEventListener("click",function(){filtrar("Laticínios",1)})
+btnFiltroLaticinios.addEventListener("click",function(){filtrar("laticinios",1)})
+
 btnFiltroTodos.addEventListener("click",function(){
     montarListaProdutos(produtos)
 })
 
 
 btnPesquisa.addEventListener("click",function(){
-    filtrar(document.querySelector(".campoBuscaPorNome").value,2)
+    filtrar(document.querySelector(".campoBuscaPorNome").value.toLowerCase(),2)
+    
     
 })
 
 montarListaProdutos(produtos)
-
